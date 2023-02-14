@@ -1,5 +1,6 @@
 package com.br.learningcad.service;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,8 +31,11 @@ public class CreateStudentService {
   private CourseDTO fetchCourse(UUID courseId) {
     String uri = "http://localhost:8081/api/v1/courses/?courseId=" + courseId;
     RestTemplate restTemplate = new RestTemplate();
-    CourseDTO response = restTemplate.getForObject(uri, CourseDTO.class);
-    return response;
+    CourseDTO[] response = restTemplate.getForObject(uri, CourseDTO[].class);
+    if (response == null)
+      return null;
+    else
+      return response[0];
   }
 
   private void checkCourseExists(CourseDTO courseDTO) {
