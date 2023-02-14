@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.br.learningcad.data.StudentRepository;
-import com.br.learningcad.domain.Student;
-import com.br.learningcad.mappers.StudentToStudentEntity;
+import com.br.learningcad.enitity.StudentEntity;
 
+import dto.StudentDTO;
 import lombok.AllArgsConstructor;
 
 @Service
@@ -16,11 +16,10 @@ import lombok.AllArgsConstructor;
 public class CreateStudentService {
   @Autowired
   StudentRepository studentRepository;
-  private final StudentToStudentEntity studentToStudentEntity;
-  
 
-  public UUID save(Student student) {
-    var studentEntity = studentToStudentEntity.mapper(student);
-
+  public UUID save(StudentDTO studentDTO) {
+    var studentEntity = new StudentEntity(studentDTO);
+    studentRepository.save(studentEntity);
+    return studentEntity.getStudentId();
   }
 }
