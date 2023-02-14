@@ -19,6 +19,10 @@ public class StudentEntity {
   private boolean status;
   private LocalDate createdOn;
 
+  public StudentEntity() {
+    
+  }
+
   public String getId() {
     return id;
   }
