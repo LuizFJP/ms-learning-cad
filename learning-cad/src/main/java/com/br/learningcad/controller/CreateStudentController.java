@@ -22,7 +22,7 @@ public class CreateStudentController {
 
   @Autowired
   CreateStudentService createStudentService;
-  @PostMapping(value="path")
+  @PostMapping(value="/student")
   public ResponseEntity<UUID> postMethodName(@RequestBody StudentDTO studentDTO) {
       UUID studentId = createStudentService.create(studentDTO);
       
