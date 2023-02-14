@@ -21,6 +21,6 @@ public class CreateStudentService {
 
   public UUID save(Student student) {
     var studentEntity = studentToStudentEntity.mapper(student);
-    
+
   }
 }

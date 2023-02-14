@@ -1,10 +1,14 @@
 package com.br.learningcad.enitity;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.UUID;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import dto.StudentDTO;
 
 @Document("students")
 public class StudentEntity {
@@ -17,10 +21,17 @@ public class StudentEntity {
   private LocalDate birthDate;
   private UUID courseId;
   private boolean status;
-  private LocalDate createdOn;
+  private LocalDateTime createdOn;
 
-  public StudentEntity() {
-    
+  public StudentEntity(StudentDTO studentDTO) {
+    studentId = UUID.randomUUID();
+    firstName = studentDTO.getFirstName();
+    lastName = studentDTO.getLastName();
+    document = studentDTO.getDocument();
+    birthDate = studentDTO.getBirthDate();
+    courseId = studentDTO.getCourseId();
+    status = true;
+    createdOn = LocalDateTime.of(LocalDate.now(), LocalTime.now());
   }
 
   public String getId() {
@@ -87,11 +98,11 @@ public class StudentEntity {
     this.status = status;
   }
 
-  public LocalDate getCreatedOn() {
+  public LocalDateTime getCreatedOn() {
     return createdOn;
   }
 
-  public void setCreatedOn(LocalDate createdOn) {
+  public void setCreatedOn(LocalDateTime createdOn) {
     this.createdOn = createdOn;
   }
 
