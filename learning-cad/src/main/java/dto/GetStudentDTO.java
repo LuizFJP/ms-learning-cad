@@ -2,12 +2,22 @@ package dto;
 
 import java.time.LocalDate;
 
+import com.br.learningcad.enitity.StudentEntity;
+
 public class GetStudentDTO {
   private String fullName;
   private String document;
   private LocalDate birthDate;
   private String courseName;
   private boolean status;
+
+  public GetStudentDTO(StudentEntity studentEntity, CourseDTO courseDTO) {
+    fullName = studentEntity.getFirstName() + " " + studentEntity.getLastName();
+    document = studentEntity.getDocument();
+    birthDate = studentEntity.getBirthDate();
+    courseName = courseDTO.getCourseName();
+    status = studentEntity.isStatus();
+  }
 
   public String getFullName() {
     return fullName;
