@@ -17,7 +17,7 @@ public class CreateStudentService {
   @Autowired
   StudentRepository studentRepository;
 
-  public UUID save(StudentDTO studentDTO) {
+  public UUID create(StudentDTO studentDTO) {
     var studentEntity = new StudentEntity(studentDTO);
     studentRepository.save(studentEntity);
     return studentEntity.getStudentId();
