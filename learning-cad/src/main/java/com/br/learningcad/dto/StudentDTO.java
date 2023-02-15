@@ -1,4 +1,4 @@
-package dto;
+package com.br.learningcad.dto;
 
 import java.time.LocalDate;
 import java.util.UUID;

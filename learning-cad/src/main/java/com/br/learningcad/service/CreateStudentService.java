@@ -10,7 +10,7 @@ import com.br.learningcad.enitity.StudentEntity;
 
 import com.br.learningcad.utils.Course;
 
-import dto.*;
+import com.br.learningcad.dto.*;
 import lombok.AllArgsConstructor;
 
 @Service

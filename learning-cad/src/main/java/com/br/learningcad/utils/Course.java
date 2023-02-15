@@ -5,7 +5,7 @@ import org.springframework.web.client.RestTemplate;
 import com.br.learningcad.exception.CourseNotFoundException;
 import java.util.UUID;
 
-import dto.CourseDTO;
+import com.br.learningcad.dto.CourseDTO;
 
 public abstract class Course {
   public static CourseDTO fetchCourse(UUID courseId) {

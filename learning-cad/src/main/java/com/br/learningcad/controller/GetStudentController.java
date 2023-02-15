@@ -12,7 +12,7 @@ import org.springframework.http.ResponseEntity;
 
 import com.br.learningcad.service.GetStudentService;
 
-import dto.GetStudentDTO;
+import com.br.learningcad.dto.GetStudentDTO;
 
 @RestController
 @RequestMapping("/api/v1")

@@ -8,7 +8,7 @@ import com.br.learningcad.utils.Course;
 
 import java.util.UUID;
 
-import dto.GetStudentDTO;
+import com.br.learningcad.dto.GetStudentDTO;
 
 @Service
 public class GetStudentService {

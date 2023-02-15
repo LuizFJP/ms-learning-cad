@@ -1,4 +1,4 @@
-package dto;
+package com.br.learningcad.dto;
 
 import java.util.UUID;
 

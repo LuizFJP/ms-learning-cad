@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.br.learningcad.service.CreateStudentService;
 
-import dto.StudentDTO;
+import com.br.learningcad.dto.StudentDTO;
 
 import java.util.UUID;
 

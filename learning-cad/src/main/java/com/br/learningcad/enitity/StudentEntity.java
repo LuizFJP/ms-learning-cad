@@ -8,7 +8,7 @@ import java.util.UUID;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import dto.StudentDTO;
+import com.br.learningcad.dto.StudentDTO;
 
 @Document("students")
 public class StudentEntity {
