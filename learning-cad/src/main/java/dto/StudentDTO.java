@@ -7,7 +7,7 @@ public class StudentDTO {
   private String firstName;
   private String lastName;
   private String document;
-  private LocalDate birthDate;
+  private LocalDate birthdate;
   @com.br.learningcad.validator.UUID
   private UUID courseId;
 
@@ -26,8 +26,8 @@ public class StudentDTO {
     return document;
   }
 
-  public LocalDate getBirthDate() {
-    return birthDate;
+  public LocalDate getBirthdate() {
+    return birthdate;
   }
 
   public UUID getCourseId() {

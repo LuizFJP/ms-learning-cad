@@ -18,17 +18,19 @@ public class StudentEntity {
   private String firstName;
   private String lastName;
   private String document;
-  private LocalDate birthDate;
+  private LocalDate birthdate;
   private UUID courseId;
   private boolean status;
   private LocalDateTime createdOn;
+
+  public StudentEntity(){}
 
   public StudentEntity(StudentDTO studentDTO) {
     studentId = UUID.randomUUID();
     firstName = studentDTO.getFirstName();
     lastName = studentDTO.getLastName();
     document = studentDTO.getDocument();
-    birthDate = studentDTO.getBirthDate();
+    birthdate = studentDTO.getBirthdate();
     courseId = studentDTO.getCourseId();
     status = true;
     createdOn = LocalDateTime.of(LocalDate.now(), LocalTime.now());
@@ -74,12 +76,12 @@ public class StudentEntity {
     this.document = document;
   }
 
-  public LocalDate getBirthDate() {
-    return birthDate;
+  public LocalDate getBirthdate() {
+    return birthdate;
   }
 
-  public void setBirthDate(LocalDate birthDate) {
-    this.birthDate = birthDate;
+  public void setBirthDate(LocalDate birthdate) {
+    this.birthdate = birthdate;
   }
 
   public UUID getCourseId() {

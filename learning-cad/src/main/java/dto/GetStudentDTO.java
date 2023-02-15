@@ -14,7 +14,7 @@ public class GetStudentDTO {
   public GetStudentDTO(StudentEntity studentEntity, CourseDTO courseDTO) {
     fullName = studentEntity.getFirstName() + " " + studentEntity.getLastName();
     document = studentEntity.getDocument();
-    birthDate = studentEntity.getBirthDate();
+    birthDate = studentEntity.getBirthdate();
     courseName = courseDTO.getCourseName();
     status = studentEntity.isStatus();
   }
@@ -35,7 +35,7 @@ public class GetStudentDTO {
     this.document = document;
   }
 
-  public LocalDate getBirthDate() {
+  public LocalDate getBirthdate() {
     return birthDate;
   }
 
