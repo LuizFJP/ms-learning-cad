@@ -5,12 +5,9 @@ import org.springframework.stereotype.Service;
 import com.br.learningcad.interfaces.IEventService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import org.springframework.kafka.core.KafkaTemplate;
 
 import lombok.RequiredArgsConstructor;
 
-import java.io.ByteArrayOutputStream;
-import java.io.ObjectOutputStream;
 import java.util.Map;
 import java.util.Properties;
 
