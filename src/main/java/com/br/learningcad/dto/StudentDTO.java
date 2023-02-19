@@ -1,5 +1,7 @@
 package com.br.learningcad.dto;
 
+import com.br.learningcad.validator.ValidUUID;
+
 import java.time.LocalDate;
 import java.util.UUID;
 
@@ -8,8 +10,8 @@ public class StudentDTO {
   private String lastName;
   private String document;
   private LocalDate birthdate;
-  @com.br.learningcad.validator.UUID
-  private UUID courseId;
+  @ValidUUID
+  private String courseId;
 
   public StudentDTO() {
   }
@@ -30,7 +32,7 @@ public class StudentDTO {
     return birthdate;
   }
 
-  public UUID getCourseId() {
+  public String getCourseId() {
     return courseId;
   }
 

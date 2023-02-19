@@ -31,7 +31,7 @@ public class StudentEntity {
     lastName = studentDTO.getLastName();
     document = studentDTO.getDocument();
     birthdate = studentDTO.getBirthdate();
-    courseId = studentDTO.getCourseId();
+    courseId = UUID.fromString(studentDTO.getCourseId());
     status = true;
     createdOn = LocalDateTime.of(LocalDate.now(), LocalTime.now());
   }

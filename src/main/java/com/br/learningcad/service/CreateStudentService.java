@@ -19,7 +19,7 @@ public class CreateStudentService {
   StudentRepository studentRepository;
 
   public CreatedStudentEventDTO create(StudentDTO studentDTO) {
-    var courseDTO = Course.fetchCourse(studentDTO.getCourseId());
+    var courseDTO = Course.fetchCourse(UUID.fromString(studentDTO.getCourseId()));
     Course.checkCourseExists(courseDTO);
     var studentEntity = new StudentEntity(studentDTO);
     

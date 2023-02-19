@@ -18,6 +18,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import javax.validation.Valid;
+
 
 @RestController
 @RequestMapping("/api/v1")
@@ -30,7 +32,7 @@ public class CreateStudentController {
   private final IEventService eventService;
 
   @PostMapping(value="/student")
-  public ResponseEntity<UUID> postMethodName(@RequestBody StudentDTO studentDTO) {
+  public ResponseEntity<UUID> postMethodName(@Valid @RequestBody StudentDTO studentDTO) {
       var studentEntity = createStudentService.create(studentDTO);
       eventService.send(studentEntity);
       return new ResponseEntity<UUID>(studentEntity.getStudentId(), HttpStatus.CREATED);
